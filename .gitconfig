@@ -1,0 +1,27 @@
+[user]
+	name =
+	email = 
+[core]
+	editor = code
+[alias]
+    acp = "!f() { [ -n \"${@}\" ] && msg=\"$1\" && shift && git add . && git commit -m \"${msg}\" ${@} && git push ; }; f"
+    st = status
+    a = add
+    ap = add --patch
+    c = commit
+    ci = commit
+    cane = commit --amend --no-edit
+    co = checkout
+    rv = remote -v
+    rh = reset --hard
+    p = push
+    pf = push --force
+    po = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+    root = rev-parse --show-toplevel
+    cleanup = !git remote prune origin && git branch --merged | grep -v '(master|main|development|dev)' | xargs git branch -d
+    b = branch
+    doff = reset HEAD^
+    tree = log --graph --oneline --decorate --color --all
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[init]
+    defaultBranch = main
