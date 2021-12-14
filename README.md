@@ -19,11 +19,3 @@
 9th commit
 
 10th commit
-
-number 11
-
-number 12...
-
-number 13
-
-number 14
